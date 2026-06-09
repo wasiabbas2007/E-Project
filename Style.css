@@ -13,7 +13,7 @@
     #preloader{
     position: fixed;
     inset: 0;
-    background:url(/E-Project//Images/Lime\ wallpaper.jpg);
+    background:url("Images/Lime wallpaper.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,7 +144,7 @@
       font-size: 30px;
     }
     .carousel-item {
-      background:url(/E-Project/Images/Background.jpg);
+      background:url(Images/Background.jpg);
       position: relative;
       background-position: center;
       background-size: cover;
@@ -293,7 +293,7 @@
         font-weight: bold;
     }
     .card2 p{
-      font-weight: none !important;
+      font-weight: normal !important;
     }
     .fla-butn a.fla{
     background-color: rgb(33, 46, 36);
@@ -482,4 +482,6 @@ p.lead.mb-6.text-black{
     opacity: 1;
     transform: translateY(0);
 }
+
+
 
