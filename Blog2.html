@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:rgb( 153, 176, 154);
+    }
+    .navbar {
+        background-color: rgb(21, 36, 14);
+        height: 70px;
+    }
+    .navbar-brand {
+        color: white !important;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .nav-link {
+        color: white !important;
+        margin-left: 15px;
+        transition: 0.3s;
+    }
+    .nav-link:hover {
+        color: rgb(82, 249, 45) !important;
+    }
+    .btn-order {
+        border: none;
+        border-radius: 50px;
+        background-color:rgb(147, 181, 149);
+        padding: 6px 25px;
+        color: aliceblue;
+        font-weight: bold;
+        transition: 0.3s;
+        height: 40px;
+        width: 170px;
+    }
+    .btn-order:hover {
+        background-color: rgb(32, 246, 36);
+    }
+    #menu {
+        font-size: 22px;
+    }
+     #menu #home:hover,
+     #menu #product:hover,
+     #menu #franch:hover,
+     #menu #about:hover,
+     #menu #contact:hover {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    footer {
+        background-color:rgb(21, 36, 14);
+        color: white;
+        padding: 60px 0 20px;
+    }
+    footer h5 {
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+     footer h5:hover,
+     footer a:hover,
+     footer p:hover,
+     footer h2:hover{
+      color: rgb(49, 212, 40);
+   }
+    .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 20px;
+    }
+    img {
+        width: 250px;
+        height: 100px;
+        margin: -20px;
+    }
+    @media(max-width:768px) {
+        .btn-order {
+            margin-top: 10px;
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+    }
+    footer img {
+        height: 150px;
+        width: 250px;
+        margin-top: -10px;
+    }
+    .fa-brands {
+        font-size: 30px;
+    }
+    .carousel-item {
+        background: url(/E-Project/Images/CAROSAL.png);
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        height: 55vh;
+        z-index: 2;
+        font-family: sans-serif;
+    }
+
+    .info {
+        color: antiquewhite;
+        z-index: 10;
+        margin-left: 15%;
+        margin-top: 6%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .info h1 {
+        font-weight: bold;
+        font-size: 40px;
+        color: rgb(23, 53, 23);
+    }
+    .info h3 {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
+    .info span {
+        color:rgb(21, 36, 14);
+    }
+    .info span i{
+        margin-left: 80px;
+    }
+     .blogs h1{
+    font-size:20 !important;
+    margin-top: -50px;
+    color: rgb(58, 79, 70) !important;
+    margin-top: 280px;
+   }
+   .blogs img{
+    height: 480px;
+    width: 950px;
+    justify-content: center !important;
+    position: relative;
+    margin-left: 100px;
+    border-radius: 10px;
+    border: 1px solid grey;
+   }
+   .write h1{
+    color: rgb(47, 70, 56) !important;
+   }
+    .blogs h1{
+    color: rgb(47, 70, 56) !important;
+   }
+   .write h2{
+    color: rgb(43, 71, 49) !important;
+    font-weight: bold !important;
+   }
+   .write h1,
+   .blogs h1,
+   .write h2{
+    color: rgb(33, 54, 33) !important;
+    font-weight: 800;
+    text-transform: capitalize;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    transition: all 0.4s ease;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+.write h1::after,
+.blogs h1::after,
+.write h2::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg,rgb(58,122,58),rgb(97,174,97));
+    border-radius: 20px;
+}
+.write h1:hover,
+.blogs h1:hover,
+.write h2:hover{
+    transform: translateY(-8px) scale(1.03);
+    color: rgb(42, 58, 42) !important;
+    text-shadow: 0 10px 20px rgba(47,111,68,0.35);
+}
+.write h1:hover::after,
+.blogs h1:hover::after,
+.write h2:hover::after{
+    width: 100%;
+} 
+ .write p{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+.write p.show{
+    opacity: 1;
+    transform: translateY(0);
+} 
+ .write p,
+ .blogs p{
+    line-height: 1.9;
+    text-align: justify;
+    border-left: 4px solid #213618;
+    padding-left: 15px;
+    transition: 0.4s;
+}
+.write p:hover,
+.blogs p:hover{
+    transform: translateX(8px);
+}
+</style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <img src="/E-Project/Images/Logo.png" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" id="home" href="/E-Project/Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="product" href="/E-Project/Product/Products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="franch" href="/E-Project/Franchise.html">Franchising</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="about" href="/E-Project/About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact" href="/E-Project/Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn-order" onclick="checkOrder()">Order Now</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- curousel -->
+    <div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="info">
+                    <h3><span>Best Of The One!</span></h3>
+                    <h1>Why Choose Natural Over <br>Processed:The Health Benefits</h1>
+                    <span style="font-size: 22px;"><i class="fa-solid fa-house" style="color:rgb(57, 82, 55);"></i>/Blog</span>
+                </div>
+            </div>
+         <!-- Card navbar -->
+        <div class="container-fluid">
+            <div class="blogs px-4 py-5 my-5 text-start">
+                <div class="col-lg-11 mx-auto">
+                    <h1 class="display-6 text-white"> Why Choose Natural Over Processed: The Health Benefits of Fresh Juice</h1>
+                </div>
+                <div class="col-lg-11 mx-auto">
+                    <p class="lead mb-4 text-white">  Have you ever wondered why more people are choosing natural beverages over processed drinks?</p>
+                </div>
+                <img src="/E-Project/Images/Blog2.jpg" alt="">
+            </div>
+        </div>
+        <div class="write">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="display-6 text-white mt-5 mb-4">
+                    The Difference Between Natural and Processed Drinks:
+                </h2>
+                <p class="fs-5 text-white mb-4">
+                    Natural juices are made from real fruits and vegetables, preserving much of their original flavor
+                    and nutritional value. Processed beverages, however, often contain added sugars, artificial flavors,
+                    preservatives, and coloring agents designed to improve taste and extend shelf life. While these
+                    products may be convenient, they can lack the freshness and authenticity that make natural juices so
+                    appealing.
+                </p>
+                <p class="fs-5 text-white mb-4">
+                    Choosing natural beverages means selecting drinks that stay closer to their original source,
+                    allowing you to enjoy a more genuine and refreshing experience.
+                </p>
+                <h2 class="display-6 text-white mt-5 mb-4">
+                    Fresh Juice Contains Natural Nutrients:
+                </h2>
+                <p class="fs-5 text-white mb-4">
+                    One of the greatest advantages of fresh juice is its naturally occurring vitamins, minerals, and
+                    antioxidants. Fruits are known for providing essential nutrients that support overall wellness and
+                    help maintain a balanced lifestyle.
+                </p>
+                <p class="fs-5 text-white mb-4">
+                    Whether it's oranges, apples, berries, or tropical fruits, fresh juice allows you to enjoy the
+                    goodness of nature in a convenient and delicious form. Every glass delivers natural flavors while
+                    helping you incorporate more fruit into your daily routine.
+                </p>
+                <h2 class="display-6 text-white mt-5 mb-4">
+                    Free from Unnecessary Additives:
+                </h2>
+                <p class="fs-5 text-white mb-4">
+                    Many processed drinks rely on artificial ingredients to enhance taste, appearance, and shelf life.
+                    Fresh juice offers a simpler alternative by focusing on real ingredients rather than synthetic
+                    additions.
+                </p>
+                <p class="fs-5 text-white mb-4">
+                    When you choose fresh juice, you're choosing a beverage that highlights the natural taste of fruit
+                    without depending on artificial flavors or excessive processing. This creates a cleaner and more
+                    authentic drinking experience.
+                </p>
+                <h2 class="display-6 text-white mt-5 mb-4">
+                    Better Taste Through Freshness:
+                </h2>
+                <p class="fs-5 text-white mb-4">
+                    Fresh ingredients play a major role in creating exceptional flavor. Unlike heavily processed
+                    beverages, fresh juice captures the vibrant taste and aroma of real fruit.
+                </p>
+                <p class="fs-5 text-white mb-4">
+                    Every sip delivers a refreshing burst of natural sweetness that feels satisfying and enjoyable. The
+                    freshness of quality ingredients makes a noticeable difference, creating a beverage experience that
+                    stands out from ordinary drinks.
+                </p>
+                <h2 class="display-6 text-white mt-5 mb-4">
+                    A Refreshing Choice for Any Time of Day:
+                </h2>
+                <p class="fs-5 text-white mb-4">
+                    Fresh juice can be enjoyed at any moment. It makes a great addition to breakfast, a refreshing
+                    afternoon drink, or a flavorful option during social gatherings.
+                </p>
+                <p class="fs-5 text-white mb-4">
+                    Its versatility makes it suitable for a variety of occasions, allowing people of all ages to enjoy a
+                    delicious and naturally refreshing beverage whenever they want something satisfying.
+                </p>
+                <h2 class="display-6 text-white mt-5 mb-4">
+                    Supporting a Healthier Lifestyle:
+                </h2>
+                <p class="fs-5 text-white mb-4">
+                    Making small improvements to daily habits can have a positive impact over time. Choosing fresh juice
+                    instead of heavily processed beverages is one way to incorporate more natural options into your
+                    routine.
+                </p>
+                <p class="fs-5 text-white mb-4">
+                    Combined with balanced eating habits and an active lifestyle, fresh juice can become part of a
+                    wellness-focused approach that emphasizes quality ingredients and mindful choices.
+                </p>
+                <h2 class="display-6 text-white mt-5 mb-4">
+                    Discover the Fresh Difference with SHREK JUICES:
+                </h2>
+                <p class="fs-5 text-white mb-4">
+                    At SHREK JUICES, we are committed to creating beverages that celebrate freshness, quality, and
+                    natural flavor. Every juice is carefully crafted to provide a refreshing experience that customers
+                    can enjoy with confidence.
+                </p>
+                <p class="fs-5 text-white mb-4">
+                    We believe that great drinks start with great ingredients. That's why our focus remains on
+                    delivering flavorful juices that reflect the goodness of nature in every sip.
+                </p>
+                <h2 class="display-6 text-white mt-5 mb-4">
+                    Conclusion:
+                </h2>
+                <p class="fs-5 text-white mb-4">
+                    Choosing natural over processed is a simple yet meaningful decision. Fresh juice offers authentic
+                    flavor, natural ingredients, and a refreshing experience that many processed beverages cannot match.
+                    By making fresh juice part of your routine, you can enjoy a delicious drink while embracing a more
+                    natural approach to refreshment and wellness.
+                </p>
+            </div>
+        </div><br>
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <img src="/E-Project/Images/Logo.png" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <h2> <b>We make crave worthy flavours that bring people together.</b></h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-3 ">
+                        <h5>Follow us</h5>
+                        <i class="fa-brands fa-facebook" style="color: rgb(118, 118, 118);"></i>
+                        <i class="fa-brands fa-instagram" style="color: rgb(118, 118, 118);"></i>
+                        <i class="fa-brands fa-youtube" style="color: rgb(118, 118, 118);"></i>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Opening Hours</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Monday-Sunday</a></li>
+                            <li><a href="#">10:00am to 11:00pm</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Useful Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="/E-Project/">Product</a></li>
+                            <li><a href="/E-Project/Contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Contact</h5>
+                        <p>Email: info@shrekjuice.com</p>
+                        <p>Phone: +92 300 1234567</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© Shrek juice. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+        <script>
+           const paragraphs = document.querySelectorAll('.write p');
+           function revealParagraphs() {
+           paragraphs.forEach((p) => {
+           const top = p.getBoundingClientRect().top;
+           if (top < window.innerHeight - 100) {
+            p.classList.add('show');
+          }
+         });
+        }
+           window.addEventListener('scroll', revealParagraphs);
+           window.addEventListener('load', revealParagraphs);
+          </script>
+              <script>
+function checkOrder(){
+
+    if(localStorage.getItem("formFilled") == "yes"){
+        alert("Order Success");
+    }
+    else{
+        alert("First fill contact form!");
+    }
+
+}
+</script>
+    </body>
+
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:rgb( 153, 176, 154);
+    }
+    .navbar {
+        background-color: rgb(21, 36, 14);
+        height: 70px;
+    }
+    .navbar-brand {
+        color: white !important;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .nav-link {
+        color: white !important;
+        margin-left: 15px;
+        transition: 0.3s;
+    }
+    .nav-link:hover {
+        color: rgb(83, 228, 50) !important;
+    }
+    .btn-order {
+        border: none;
+        border-radius: 50px;
+        background-color:rgb( 153, 176, 154);
+        padding: 6px 25px;
+        color: aliceblue;
+        font-weight: bold;
+        transition: 0.3s;
+        height: 40px;
+        width: 170px;
+    }
+    .btn-order:hover {
+        background-color: rgb(34, 237, 31);
+    }
+    #menu {
+        font-size: 22px;
+    }
+     #menu #home:hover,
+     #menu #product:hover,
+     #menu #franch:hover,
+     #menu #about:hover,
+     #menu #contact:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        transition: 1s ease;
+    }
+    footer {
+        background-color:rgb(21, 36, 14);
+        color: white;
+        padding: 60px 0 20px;
+    }
+    footer h5 {
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+     footer h5:hover,
+     footer a:hover,
+     footer p:hover,
+     footer h2:hover{
+      color: rgb(49, 212, 40);
+   }
+    .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 20px;
+    }
+    img {
+        width: 250px;
+        height: 100px;
+        margin: -20px;
+
+    }
+    @media(max-width:768px) {
+        .btn-order {
+            margin-top: 10px;
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+    }
+    footer img {
+        height: 150px;
+        width: 250px;
+        margin-top: -10px;
+    }
+    .fa-brands {
+        font-size: 30px;
+    }
+    .carousel-item {
+        background: url(/E-Project/Images/CAROSAL.png);
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        height: 55vh;
+        z-index: 2;
+        font-family: sans-serif;
+    }
+
+    .info {
+        color: antiquewhite;
+        z-index: 10;
+        margin-left: 15%;
+        margin-top: 6%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .info h1 {
+        font-weight: bold;
+        font-size: 40px;
+        color: rgb(23, 53, 23);
+    }
+    .info h3 {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
+    .info span {
+        color:rgb(21, 36, 14);            
+    }
+    .info span i {
+        color:rgb(21, 36, 14);
+        margin-left: 80px;             
+    }
+     .blogs h1{
+    font-size:20 !important;
+    margin-top: -50px;
+    color:  rgb(32, 49, 42) !important;
+    margin-top: 280px;
+   }
+   .blogs img{
+    height: 480px;
+    width: 950px;
+    justify-content: center !important;
+    position: relative;
+    margin-left: 100px;
+    border-radius: 10px;
+    border: 1px solid grey;
+   }
+   .write h1{
+    color: rgb(47, 70, 56) !important;
+   }
+    .blogs h1{
+    color: rgb(47, 70, 56) !important;
+   }
+   .write h2{
+    color: rgb(43, 71, 49) !important;
+    font-weight: bold !important;
+   }
+   .write h1,
+   .blogs h1,
+   .write h2{
+    color: rgb(26, 47, 26) !important;
+    font-weight: 800;
+    text-transform: capitalize;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    transition: all 0.4s ease;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+.write h1::after,
+.blogs h1::after,
+.write h2::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg,rgb(58, 122, 58),rgb(97, 174, 97));
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+.write h1:hover,
+.blogs h1:hover,
+.write h2:hover{
+    transform: translateY(-8px) scale(1.03);
+    color: green!important;
+    text-shadow: 0 10px 20px rgba(47,111,68,0.35);
+}
+.write h1:hover::after,
+.blogs h1:hover::after,
+.write h2:hover::after{
+    width: 100%;
+} 
+ .write p{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+.write p.show{
+    opacity: 1;
+    transform: translateY(0);
+} 
+ .write p,
+ .blogs p{
+    line-height: 1.9;
+    text-align: justify;
+    border-left: 4px solid #213618;
+    padding-left: 15px;
+    transition: 0.4s;
+}
+.write p:hover,
+.blogs p:hover{
+    transform: translateX(8px);
+}
+</style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <img src="/E-Project/Images/Logo.png" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" id="home" href="/E-Project/Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="product" href="/E-Project/Product/Products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="franch" href="/E-Project/Franchise.html">Franchising</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="about" href="/E-Project/About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact" href="/E-Project/Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn-order" onclick="checkOrder()">Order Now</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- curousel -->
+    <div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="info">
+                    <h3><span>Best Of The One!</span></h3>
+                    <h1>Superfoods in Your Juice and <br> What Makes Them So Super?</h1>
+                    <span style="font-size: 22px;"><i class="fa-solid fa-house" style="color:rgb(57, 82, 55);"></i>/Blog</span>
+                </div>
+            </div>
+            <!-- carousal img -->
+            <!-- <div class="image">
+                <img src="/E-Project/Images/Carousel.png" class="glass">
+            </div>
+        </div> -->
+         <div class="container-fluid">
+        <div class="blogs px-4 py-5 my-5 text-start">
+            <div class="col-lg-11 mx-auto">
+            <h1 class="display-6 text-white">Superfoods in Your Juice and What Makes Them So Super?</h1></div>
+            <div class="col-lg-11 mx-auto">
+                <p class="lead mb-4 text-white">On a rather serious note, have you ever wondered what makes our juices so invigorating and downright delicious, not to mention super organic?</p>
+            </div>
+         <img src="/E-Project/Images/Blog1.jpg" alt="">
+        </div></div>
+        <div class="write">
+    <div class="col-lg-10 mx-auto">
+    <h1 class="display-6 text-white mb-4">
+        The Secret Behind SHREK JUICES: Freshness, Flavor & Energy in Every Sip.
+    </h1>
+    <p class="fs-5 text-white mb-4">
+        Have you ever wondered what makes a juice truly unforgettable? At SHREK JUICES, we believe that every drink should be more than just a beverage—it should be an experience. From the moment you take your first sip, you'll discover a refreshing blend of quality, flavor, and freshness crafted to brighten your day. Our passion is simple: creating juices and smoothies that people love and remember.
+    </p>
+    <h2 class="display-6 text-white mt-5 mb-4">
+        What Makes SHREK JUICES Different?
+    </h2>
+    <p class="fs-5 text-white mb-4">
+        In a world full of ordinary drinks, SHREK JUICES stands out by focusing on quality and customer satisfaction. Every ingredient is carefully selected to ensure that each beverage delivers exceptional taste and freshness. We don't just serve drinks—we create moments of enjoyment that leave a lasting impression.
+    </p>
+    <h2 class="display-6  text-white mt-5 mb-4">
+        Fresh Ingredients, Incredible Taste.
+    </h2>
+    <p class="fs-5 text-white mb-4">
+        Great taste starts with great ingredients. That's why we use fresh fruits and premium-quality ingredients to create our signature juices and smoothies. Every blend is designed to highlight natural flavors, resulting in beverages that are vibrant, refreshing, and delicious from the first sip to the last.
+    </p>
+    <h2 class="display-6 fw-bold text-white mt-5 mb-4">
+        A Juice for Every Mood
+    </h2>
+    <p class="fs-5 text-white mb-4">
+        Whether you're starting your morning, taking a break during a busy day, or spending time with friends and family, SHREK JUICES has the perfect drink for every occasion. Our diverse menu offers something for everyone, ensuring that every customer can find a flavor they love.
+    </p>
+    <p class="fs-5 text-white mb-4">
+        From refreshing fruit juices to creamy smoothies and signature blends, our drinks are crafted to suit every mood and moment. Whatever your preference, you'll always find something exciting waiting for you at SHREK JUICES.
+    </p>
+    <h2 class="display-6 text-white mt-5 mb-4">
+        Why Customers Love SHREK JUICES.
+    </h2>
+    <p class="fs-5 text-white mb-4">
+        Our customers choose SHREK JUICES because they know they're getting quality in every sip. We are committed to delivering drinks that are consistently fresh, flavorful, and satisfying. Our attention to detail and dedication to excellence have helped us build a loyal community of juice lovers.
+    </p>
+    <p class="fs-5 text-white mb-4">
+        Every drink is prepared with care, ensuring that our customers receive the highest standard of quality. It's this commitment that makes SHREK JUICES a trusted name for refreshment and great taste.
+    </p>
+    <h2 class="display-6  text-white mt-5 mb-4">
+        More Than Just a Juice Brand.
+    </h2>
+    <p class="fs-5 text-white mb-4">
+        SHREK JUICES is more than a place to grab a drink. It's a destination for people who appreciate freshness, quality, and exceptional flavor. We believe that life's best moments are often the simplest ones—like enjoying a perfectly crafted juice on a warm day or sharing a smoothie with someone special.
+    </p>
+    <h2 class="display-6 text-white mt-5 mb-4">
+        Experience SHREK JUICES Today.
+    </h2>
+    <p class="fs-5 text-white mb-4">
+        Ready to discover your new favorite drink? Explore our menu and experience the difference that freshness and quality can make. Every juice and smoothie is crafted with passion, delivering a refreshing experience you'll want to enjoy again and again.
+    </p>
+    <p class="fs-5 text-white mb-4">
+        At SHREK JUICES, every sip tells a story of freshness, quality, and flavor. Join us today and discover why so many customers choose SHREK JUICES as their favorite destination for refreshing beverages.
+    </p>
+</div>
+</div>
+        </div>
+       </div>
+       
+      
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <img src="/E-Project/Images/Logo.png" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <h2> <b>We make crave worthy flavours that bring people together.</b></h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-3 ">
+                        <h5>Follow us</h5>
+                        <i class="fa-brands fa-facebook" style="color: rgb(118, 118, 118);"></i>
+                        <i class="fa-brands fa-instagram" style="color: rgb(118, 118, 118);"></i>
+                        <i class="fa-brands fa-youtube" style="color: rgb(118, 118, 118);"></i>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Opening Hours</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Monday-Sunday</a></li>
+                            <li><a href="#">10:00am to 11:00pm</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Useful Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="/E-Project/Product/Products.html">Product</a></li>
+                            <li><a href="/E-Project/Contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Contact</h5>
+                        <p>Email: info@shrekjuice.com</p>
+                        <p>Phone: +92 300 1234567</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© Shrek juice. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+        <script>
+           const paragraphs = document.querySelectorAll('.write p');
+           function revealParagraphs() {
+           paragraphs.forEach((p) => {
+           const top = p.getBoundingClientRect().top;
+           if (top < window.innerHeight - 100) {
+            p.classList.add('show');
+          }
+         });
+        }
+           window.addEventListener('scroll', revealParagraphs);
+           window.addEventListener('load', revealParagraphs);
+          </script>
+              <script>
+function checkOrder(){
+
+    if(localStorage.getItem("formFilled") == "yes"){
+        alert("Order Success");
+    }
+    else{
+        alert("First fill contact form!");
+    }
+
+}
+</script>
+    </body>
+
+</html>

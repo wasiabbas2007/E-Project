@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:rgb( 153, 176, 154);
+    }
+    .navbar {
+        background-color: rgb(21, 36, 14);
+        /* padding: 15px 0; */
+        height: 70px;
+    }
+    .navbar-brand {
+        color: white !important;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .nav-link {
+        color: white !important;
+        margin-left: 15px;
+        transition: 0.3s;
+    }
+    .nav-link:hover {
+        color: rgb(57, 80, 52) !important;
+    }
+    .btn-order {
+        border: none;
+        border-radius: 50px;
+        background-color:rgb( 153, 176, 154);
+        padding: 6px 25px;
+        color: aliceblue;
+        font-weight: bold;
+        transition: 0.3s;
+        height: 40px;
+        width: 170px;
+    }
+    .btn-order:hover {
+        background-color: rgb(10, 174, 30);
+    }
+    #menu {
+        font-size: 22px;
+    }
+     #menu #home:hover,
+     #menu #product:hover,
+     #menu #franch:hover,
+     #menu #about:hover,
+     #menu #contact:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        transition: 1s ease;
+    }
+    footer {
+        background-color:rgb(21, 36, 14);
+        color: white;
+        padding: 60px 0 20px;
+        margin-top: -100px !important;
+    }
+    footer h5 {
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+     footer h5:hover,
+     footer a:hover,
+     footer p:hover,
+     footer h2:hover{
+      color: rgb(49, 212, 40);
+   }
+    .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 20px;
+    }
+    img {
+        width: 250px;
+        height: 100px;
+        margin: -20px;
+
+    }
+    @media(max-width:768px) {
+        .btn-order {
+            margin-top: 10px;
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+    }
+    footer img {
+        height: 150px;
+        width: 250px;
+        margin-top: -10px;
+    }
+    .fa-brands {
+        font-size: 30px;
+    }
+    .carousel-item {
+        background: url(/E-Project/Images/CAROSAL.png);
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        height: 55vh;
+        font-family: sans-serif;
+    }
+    .for{
+        margin-top: 320px !important;
+    }
+    .for h1{
+        color: rgb(23, 53, 23) !important;
+    }
+    .info {
+        color: white;
+        z-index: 10;
+        margin-left: 20%;
+        margin-top: 6%;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .info h1 {
+        font-weight: bold;
+        font-size: 48px;
+        color: rgb(23, 53, 23);
+    }
+    .info h3 {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
+    .info span {
+        color:rgb(21, 36, 14);
+    }
+.store-title {
+    font-size: 30px;
+    font-weight:bold;
+    color: rgb(23, 53, 23);
+    line-height: 1.2;
+}
+.info-box {
+    background:white;
+    padding: 25px;
+    border-radius: 5px;
+    height: 160px;
+    border: 2px solid rgb(42, 83, 42);
+}
+.info-box1 {
+    background:white;
+    padding: 25px;
+    border-radius: 5px;
+    border: 2px solid rgb(42, 83, 42);
+    height: 110px;
+}
+.info-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color:rgb(23, 53, 23);
+    margin-bottom: 20px;
+}
+.info-box p {
+    font-size: 16px;
+    color: gray;
+    line-height: 1.8;
+    margin-bottom: 0;
+    margin-bottom:10px;
+}
+.contact-btn {
+    display: inline-block;
+    margin-top: 35px;
+    height: 40px;
+    width: 160px;
+    border: 2px solid rgb(35, 66, 35);
+    border-radius: 50px;
+    text-decoration: none;
+    color:rgb(224, 231, 224);
+    font-size: 24px;
+    font-weight:bold;
+    background-color: rgb(130, 178, 140);
+    transition: .3s;
+    text-align: center;
+}
+.contact-btn:hover {
+    background:rgb(50, 139, 9);
+    color:white;
+}
+.store-image img {
+    width: 100%;
+    height:400px;
+    object-fit: cover;
+}
+.map-wrapper {
+    height: 550px;
+    border-radius: 30px;
+    margin-top: -20px;
+}
+.map-wrapper iframe {
+    width: 100%;
+    height: 400px;
+}
+@media (max-width: 991px) {
+    .store-title {
+        font-size: 42px;
+    }
+    .store-image img,
+    .map-wrapper {
+        height: 450px;
+    }
+}
+.reveal{
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <img src="/E-Project/Images/Logo.png" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" id="home" href="/E-Project/Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="product" href="/E-Project/Product/Products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="franch" href="/E-Project/Franchise.html">Franchising</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="about" href="/E-Project/About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact" href="/E-Project/Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn-order" onclick="checkOrder()">Order Now</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- curousel -->
+    <div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="info reveal">
+                    <h3><span>Best Of The One!</span></h3>
+                    <h1>Store Location</h1>
+                    <span style="font-size: 22px;"><i class="fa-solid fa-house" style="color:rgb(57, 82, 55);"></i>/Store Location</span>
+                </div>
+            </div>
+            <div class="for px-4 py-5 my-5 text-center reveal">
+        <h1 class="display-5 fw-bold text-white">Store Location</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 text-white">Find a Shrek Juice Near You Visit our stores to enjoy freshly prepared juices*</p>
+        </div>
+            <section class="store-location py-5 reveal">
+    <div class="container-fluid px-lg-5">
+        <div class="row g-4 align-items-start">
+            <div class="col-lg-4">
+                <h2 class="store-title mb-4">
+                 Coming soon-Karachi
+                </h2>
+                <div class="info-box1 mb-4">
+                    <h3>Send Us Email Through</h3>
+                    <p>info@shrekjuices.com</p>
+                </div>
+                <div class="info-box">
+                    <h3>Reach Us Through This Address</h3>
+                    <p>
+                       We're excited to announce that Shrek Juice
+                       will soon be opening in Karachi.
+                    </p>
+                </div>
+                <a href="/E-Project/Contact.html" class="contact-btn">
+                    Contact Us
+                </a>
+            </div>
+            <!-- Store Image -->
+            <div class="col-lg-4">
+
+                <div class="store-image reveal">
+                    <img src="/E-Project/Images/STORE .jpg"
+                        alt="store">
+                </div>
+
+            </div>
+            <!-- Google Map -->
+            <div class="col-lg-4">
+                <div class="map-wrapper reveal">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3427.021491313405!2d73.46216518201587!3d30.802031608932197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918090b17e6ef71%3A0xcd56d8b723a66932!2sComing%20soon!5e0!3m2!1sen!2s!4v1779551957120!5m2!1sen!2s"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+</div>
+</div>
+        <!-- footer -->
+        <footer class="reveal">
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <img src="/E-Project/Images/Logo.png" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <h2> <b>We make crave worthy flavours that bring people together.</b></h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-3 ">
+                        <h5>Follow us</h5>
+                        <i class="fa-brands fa-facebook" style="color: rgb(118, 118, 118);"></i>
+                        <i class="fa-brands fa-instagram" style="color: rgb(118, 118, 118);"></i>
+                        <i class="fa-brands fa-youtube" style="color: rgb(118, 118, 118);"></i>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Opening Hours</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Monday-Sunday</a></li>
+                            <li><a href="#">10:00am to 11:00pm</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Useful Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="/E-Project/Product/Products.html">Product</a></li>
+                            <li><a href="/E-Project/Contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Contact</h5>
+                        <p>Email: info@shrekjuice.com</p>
+                        <p>Phone: +92 300 1234567</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© Shrek juice. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+        <script>
+    function reveal() {
+    let reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((element) => {
+        let windowHeight = window.innerHeight;
+        let elementTop = element.getBoundingClientRect().top;
+        let revealPoint = 100;
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add("active");
+        }
+    });
+     }
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("load", reveal);
+</script>
+    <script>
+function checkOrder(){
+
+    if(localStorage.getItem("formFilled") == "yes"){
+        alert("Order Success");
+    }
+    else{
+        alert("First fill contact form!");
+    }
+
+}
+</script>
+</body>
+
+</html>

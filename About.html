@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:rgb(153, 182, 154);
+    }
+    .navbar {
+        background-color: rgb(21, 36, 14);
+        height: 70px;
+    }
+    .navbar-brand {
+        color: white !important;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .nav-link {
+        color: white !important;
+        margin-left: 15px;
+        transition: 0.3s;
+    }
+    .nav-link:hover {
+        color: rgb(51, 201, 18) !important;
+    }
+    .btn-order {
+        border: none;
+        border-radius: 50px;
+        background-color:rgb(140, 171, 142);
+        padding: 6px 25px;
+        color: aliceblue;
+        font-weight: bold;
+        transition: 0.3s;
+        height: 40px;
+        width: 170px;
+    }
+    .btn-order:hover {
+        background-color: rgb(9, 167, 38);
+    }
+    #menu {
+        font-size: 22px;
+    }
+    #menu #home:hover {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    #menu #product:hover {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    #menu #franch:hover {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    #menu #about:hover {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    #menu #contact:hover {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    footer {
+        background-color:rgb(21, 36, 14);
+        color: white;
+        padding: 60px 0 20px;
+    }
+    footer h5 {
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    footer a {
+        color: white;
+        text-decoration: none;
+    }
+      footer h5:hover,
+     footer a:hover,
+     footer p:hover,
+     footer h2:hover{
+      color: rgb(49, 212, 40);
+   }
+    .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 20px;
+    }
+    img {
+        width: 250px;
+        height: 100px;
+        margin: -20px;
+
+    }
+    @media(max-width:768px) {
+        .btn-order {
+            margin-top: 10px;
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+    }
+    footer img {
+        height: 150px;
+        width: 250px;
+        margin-top: -10px;
+    }
+    .fa-brands {
+        font-size: 30px;
+    }
+    .carousel-item {
+        background: url(/E-Project/Images/CAROSAL.png);
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        height: 55vh;
+        z-index: 2;
+        font-family: sans-serif;
+    }
+
+    .info {
+        color: antiquewhite;
+        z-index: 10;
+        margin-left: 20%;
+        margin-top: 6%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .info h1 {
+        font-weight: bold;
+        font-size: 48px;
+        color: rgb(23, 53, 23);
+    }
+    .info h3 {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
+    .info span {
+        color:rgb(21, 36, 14);
+    }
+    .image {
+        height: 40%;
+        width: 90%;
+        position: absolute;
+        right: 100;
+        bottom: 0px;
+        z-index: 1;
+    }
+    .image img {
+        position: absolute;
+        height: 305%;
+        width: 55%;
+        left: 75%;
+        top: -190px;
+        transform: translate(-50%);
+        bottom: 0;
+        transition: 3s ease;
+    }
+   .franchise img{
+    height: 480px;
+    width: 950px;
+    justify-content: center !important;
+    position: relative;
+    margin-left: 100px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    margin-top: -60px;
+   }
+   .about1{
+    margin-top: 300PX;
+    color: aliceblue;
+    font-size: 25px;
+   }
+   .about1  img{
+    height: 250px;
+    width: 300px;
+    border-radius:50px;
+    border: 2px solid rgb(34, 45, 34);
+   }
+    .about2  img{
+    height: 250px;
+    width: 300px;
+    border-radius:50px;
+    border: 2px solid rgb(34, 45, 34);
+   }
+   .about2{
+    color: aliceblue;
+    font-size: 25px;
+    align-items: center;
+    margin-left: 100px;
+   }
+    h2.section-title{
+    font-size:50px;
+    color: rgb(21, 36, 14);
+    font-weight: bold;
+   }
+   .about2 .img-fluid{
+    margin-right: 100px;
+   }
+ .why-choose{
+    color: aliceblue;
+ }
+ .why-choose h2{
+    color: rgb(21, 36, 14);
+    font-size: 50px;
+    font-weight: bold;
+ }
+ .why-choose i{ 
+    color:rgb(53, 94, 35);
+    font-size: 35px;
+ }
+  .why-choose h5{
+    color: rgb(21, 36, 14);
+    font-size: 25px;
+    font-weight: bold;
+ }
+.why-choose p{
+    font-size:18px;
+    color:rgb(53, 94, 35);
+}
+.preparation-section h2{
+    color: rgb(21, 36, 14);
+    font-size: 40px;
+    font-weight: bold;
+}
+.preparation-section h4{
+    color: rgb(21, 36, 14);
+    font-size: 30px;
+}
+.preparation-section p{
+    font-size: 25px;
+}
+.preparation-section img{
+    height: 400px;
+    width: 600px;
+    border: 2px solid rgb(59, 71, 59);
+    border-top-right-radius:250px  !important;
+}
+.reveal{
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease;
+}
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.feature-box{
+    border: 2px solid rgb(29, 45, 30);
+    height: 240px;
+    width: 260px;
+    padding-top: 20px;
+    background-color: rgb(212, 244, 217);
+    border-radius: 50px;
+}
+.feature-box:hover{
+     transform: scale(1.1);
+    transition: 0.3s;
+}
+</style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <img src="/E-Project/Images/Logo.png" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" id="home" href="/E-Project/Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="product" href="/E-Project/Product/Products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="franch" href="/E-Project/Franchise.html">Franchising</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="about" href="/E-Project/About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact" href="/E-Project/Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn-order" onclick="checkOrder()">Order Now</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- curousel -->
+    <div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="info reveal">
+                    <h3><span>Best Of The One!</span></h3>
+                    <h1>About</h1>
+                    <span style="font-size: 22px;"><i class="fa-solid fa-house" style="color:rgb(57, 82, 55);"></i>/About us</span>
+                </div>
+            </div>
+         
+        <section class="about1 py-5">
+    <div class="container reveal">
+        <div class="row g-4">
+            <!-- Our Story -->
+            <div class="col-lg-12">
+                <div class="about-box h-100 eveal">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center">
+                            <img src="/E-Project/Images/Boba.jpg"
+                                 class="img-fluid"
+                                 alt="Our Story">
+                        </div>
+                        <div class="col-md-8 reveal">
+                            <h2 class="section-title">Our Story</h2>
+                            <p>
+                                SHREK JUICES was created with a simple vision:
+                                to offer delicious and refreshing beverages made
+                                with care and passion.
+                            </p>
+                            <p>
+                                What started as a love for fresh flavors has
+                                grown into a brand dedicated to serving customers
+                                with quality drinks they can trust.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div></section>
+             <section class="about2 py-5">
+    <div class="container reveal">
+        <div class="row g-4">
+            <!-- Our mission -->
+            <div class="col-lg-12">
+                <div class="about-box h-100">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 reveal">
+                            <h2 class="section-title">Our Mission</h2>
+                                <p>
+                                Our mission is to provide customers with
+                                refreshing beverages made from quality
+                                ingredients while maintaining high standards
+                                of taste and freshness.
+                            </p>
+                            <p>
+                                We strive to create products that not only
+                                taste great but also become part of our
+                                customers' everyday moments.
+                            </p>
+                        </div>
+                        <div class="col-md-4 text-center reveal">
+                            <img src="/E-Project/Images/Shrek.png"
+                                 class="img-fluid"
+                                 alt="Our Mission">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+</section>
+<section class="why-choose py-5 reveal">
+    <div class="container">
+
+        <h2 class="text-center section-heading mb-5 reveal">
+            Why Choose SHREK JUICES?
+        </h2>
+
+        <div class="row text-center">
+
+            <div class="col-lg col-md-6 mb-4 reveal">
+                <div class="feature-box">
+                    <div class="icon-circle">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h5>Premium Quality Ingredients</h5>
+                    <p>
+                        We use the finest fruits and ingredients to ensure exceptional taste.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg col-md-6 mb-4 reveal">
+                <div class="feature-box">
+                    <div class="icon-circle">
+                        <i class="fas fa-glass-whiskey"></i>
+                    </div>
+
+                    <h5>Freshly Prepared Drinks</h5>
+
+                    <p>
+                        Every drink is made fresh to deliver maximum flavor and nutrition.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg col-md-6 mb-4 reveal">
+                <div class="feature-box">
+                    <div class="icon-circle">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5>Excellent Customer Experience</h5>
+                    <p>
+                        Customer satisfaction is our top priority in everything we do.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg col-md-6 mb-4 reveal">
+                <div class="feature-box">
+                    <div class="icon-circle">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h5>Commitment to Quality</h5>
+                    <p>
+                        We maintain high standards to ensure you get the best every time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="preparation-section py-5 reveal">
+    <div class="container">
+        <div class="row align-items-center text-white">
+            <!-- Image Side -->
+            <div class="col-lg-6 mb-4">
+                <div class="prep-img reveal">
+                    <img src="/E-Project/Images/shop.jpg"
+                         class="img-fluid rounded-4"
+                         alt="Team Preparing Juice">
+                </div>
+            </div>
+            <!-- Content Side -->
+            <div class="col-lg-6 reveal">
+                <h2 class="prep-title">
+                    Passion in Every Preparation
+                </h2>
+                <p>
+                    Our team works with passion and dedication to bring you
+                    drinks that are not only delicious but also refreshing
+                    and satisfying.
+                </p>
+
+                <p>
+                    Every ingredient, every blend, and every detail is
+                    handled with care to ensure the highest level of
+                    quality and consistency.
+                </p>
+
+                <h4 class="mt-4 reveal">
+                    Because you deserve the best.
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+        <!-- footer -->
+        <footer class="reveal">
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <img src="/E-Project/Images/Logo.png" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <h2> <b>We make crave worthy flavours that bring people together.</b></h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-3 ">
+                        <h5>Follow us</h5>
+                        <i class="fa-brands fa-facebook" style="color: rgb(118, 118, 118);"></i>
+                        <i class="fa-brands fa-instagram" style="color: rgb(118, 118, 118);"></i>
+                        <i class="fa-brands fa-youtube" style="color: rgb(118, 118, 118);"></i>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Opening Hours</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Monday-Sunday</a></li>
+                            <li><a href="#">10:00am to 11:00pm</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Useful Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="/E-Project/Product/Products.html">Product</a></li>
+                            <li><a href="/E-Project/Contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Contact</h5>
+                        <p>Email: info@shrekjuice.com</p>
+                        <p>Phone: +92 300 1234567</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© Shrek juice. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+      <script>
+       function reveal() {
+       let reveals = document.querySelectorAll(".reveal");
+        reveals.forEach((element) => {
+        let windowHeight = window.innerHeight;
+        let elementTop = element.getBoundingClientRect().top;
+        let revealPoint = 100;
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add("active");
+        }
+    });
+}
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
+</script>
+    <script>
+function checkOrder(){
+
+    if(localStorage.getItem("formFilled") == "yes"){
+        alert("Order Success");
+    }
+    else{
+        alert("First fill contact form!");
+    }
+
+}
+</script>
+    </body>
+</html>
